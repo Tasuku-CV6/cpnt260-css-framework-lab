@@ -1,9 +1,11 @@
+<!-- Using Modal componet for Tailwind -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind contact Page</title>
+    <title>Tailwind Contact Page</title>
+    <link rel="stylesheet" href="css/modal.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -17,14 +19,27 @@
       };
     </script>
     <style>
-      /* Hide the modal by default */
+      /* Modal styles */
       #modal {
-        display: none;
+        display: none; /* Hidden by default */
       }
 
-      /* Show the modal when targeted */
+      /* Show modal when targeted */
       #modal:target {
         display: flex; /* Show modal */
+      }
+
+      /* Fade out */
+      #modal:not(:target) {
+        opacity: 0; /* Invisible */
+        pointer-events: none; /* Prevent interaction */
+        transition: opacity 0.5s ease; /* Fade transition */
+      }
+
+      /* Fully visible */
+      #modal:target {
+        opacity: 1; /* Fully visible */
+        transition: opacity 0.5s ease; /* Fade transition */
       }
     </style>
   </head>
@@ -34,9 +49,10 @@
         <a href="#" class="text-white text-2xl font-bold">Zenith Balance</a>
         <ul class="hidden md:flex space-x-6 text-white">
           <li><a href="#" class="hover:text-gray-400">Home</a></li>
+          <li><a href="index.html" class="hover:text-gray-400">Gallery</a></li>
           <li><a href="#" class="hover:text-gray-400">Product</a></li>
           <li><a href="#" class="hover:text-gray-400">About</a></li>
-          <li><a href="#" class="hover:text-gray-400">Contact</a></li>
+          <li><a href="modal.html" class="hover:text-gray-400">Contact</a></li>
         </ul>
         <div class="md:hidden">
           <button class="text-white">Menu</button>
@@ -47,7 +63,7 @@
       <section id="contact" class="py-16 bg-white">
         <div class="container mx-auto text-center">
           <h2 class="text-4xl font-bold mb-10">Get in Touch</h2>
-          <p>
+          <p class="p-2 m-10">
             At Zenith Balance, we’re here to support your journey towards
             mindfulness and inner peace. Whether you have questions about our
             meditation programs, need guidance on your practice, or want to
@@ -56,22 +72,32 @@
             Together, let’s cultivate balance and tranquility in your life.
           </p>
           <form class="max-w-lg mx-auto space-y-6">
+            <label for="name" class="block text-gray-700 text-left">Name</label>
             <input
               type="text"
+              id="name"
               placeholder="Your Name"
               class="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             />
+            <label for="email" class="block text-gray-700 text-left mb-2"
+              >Email</label
+            >
             <input
               type="email"
+              id="email"
               placeholder="Your Email"
               class="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             />
+            <label for="message" class="block text-gray-700 text-left mb-2"
+              >Message</label
+            >
             <textarea
+              id="message"
               placeholder="Your Message"
               class="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             ></textarea>
             <button
-              class="w-full bg-blue-500 text-white p-4 rounded hover:bg-blue-600"
+              class="w-full bg-blue-500 text-black p-4 rounded hover:bg-blue-600"
             >
               Send Message
             </button>
@@ -79,12 +105,15 @@
         </div>
       </section>
       <section class="text-center p-10">
-        <h1 class="text-3xl font-bold">Welcome to Our Site</h1>
-        <p class="mt-4">Click the button below to see the modal.</p>
+        <h1 class="text-3xl font-bold">Contact Information</h1>
+        <p class="mt-4">
+          Please click the button below to access our Contact Information for
+          any further inquiries.
+        </p>
         <a
           href="#modal"
-          class="mt-6 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-          >Open Modal</a
+          class="mt-6 inline-block bg-blue-500 text-black px-4 py-2 rounded hover:bg-blue-600"
+          >Open Contact Information</a
         >
       </section>
 
@@ -94,11 +123,18 @@
         class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
       >
         <div class="bg-white rounded-lg p-5 max-w-sm mx-auto relative">
-          <h2 class="text-5xl font-semibold">Hit me, I dare you!</h2>
-          <p class="mt-2">
-            This is a pop-up letting you know that you have made a horriable
-            mistake hitting me and I shall seek revenge on you.
+          <h2 class="text-2xl font-semibold text-blue-700">
+            This is our Contact Information:
+          </h2>
+          <p class="text-black">
+            Zenith Balance Email: support@zenithbalance.com
           </p>
+          <p class="text-black">Phone: (555) 123-4567</p>
+          <p class="text-black">
+            Address: Zenith Balance Center 123 Serenity Lane Mindfulness City,
+            ST 12345
+          </p>
+          <p class="text-black">Website: www.zenithbalance.com</p>
           <div class="flex justify-end mt-4">
             <a href="#" class="text-blue-500 hover:text-blue-700">Okay</a>
             <a
@@ -112,7 +148,7 @@
     </main>
     <footer class="bg-gray-800 py-4">
       <div class="container mx-auto text-center text-white">
-        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+        <p>&copy; 2024 Ethan Dam. All Rights Reserved.</p>
       </div>
     </footer>
   </body>
