@@ -1,4 +1,4 @@
-<!-- Using Modal componet for Tailwind -->
+<!-- Tailwind HTML -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -47,18 +47,39 @@
     <header class="bg-gray-800 p-4">
       <nav class="container mx-auto flex justify-between items-center">
         <a href="#" class="text-white text-2xl font-bold">Zenith Balance</a>
-        <ul class="hidden md:flex space-x-6 text-white">
+        <div class="hidden md:flex space-x-6 text-white">
+          <ul class="flex space-x-6">
+            <li><a href="#" class="hover:text-gray-400">Home</a></li>
+            <li>
+              <a href="index.html" class="hover:text-gray-400">Gallery</a>
+            </li>
+            <li><a href="#" class="hover:text-gray-400">Product</a></li>
+            <li><a href="#" class="hover:text-gray-400">About</a></li>
+            <li>
+              <a href="modal.html" class="hover:text-gray-400">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="md:hidden">
+          <button
+            class="text-white"
+            onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+          >
+            Menu
+          </button>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="hidden md:hidden bg-gray-800 text-white">
+        <ul class="flex flex-col space-y-2 p-4">
           <li><a href="#" class="hover:text-gray-400">Home</a></li>
           <li><a href="index.html" class="hover:text-gray-400">Gallery</a></li>
           <li><a href="#" class="hover:text-gray-400">Product</a></li>
           <li><a href="#" class="hover:text-gray-400">About</a></li>
           <li><a href="modal.html" class="hover:text-gray-400">Contact</a></li>
         </ul>
-        <div class="md:hidden">
-          <button class="text-white">Menu</button>
-        </div>
-      </nav>
+      </div>
     </header>
+
     <main>
       <section id="contact" class="py-16 bg-white">
         <div class="container mx-auto text-center">
@@ -79,6 +100,7 @@
               placeholder="Your Name"
               class="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             />
+
             <label for="email" class="block text-gray-700 text-left mb-2"
               >Email</label
             >
@@ -88,6 +110,7 @@
               placeholder="Your Email"
               class="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             />
+
             <label for="message" class="block text-gray-700 text-left mb-2"
               >Message</label
             >
@@ -96,6 +119,7 @@
               placeholder="Your Message"
               class="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             ></textarea>
+
             <button
               class="w-full bg-blue-500 text-black p-4 rounded hover:bg-blue-600"
             >
@@ -104,6 +128,7 @@
           </form>
         </div>
       </section>
+
       <section class="text-center p-10">
         <h1 class="text-3xl font-bold">Contact Information</h1>
         <p class="mt-4">
@@ -146,6 +171,7 @@
         </div>
       </div>
     </main>
+
     <footer class="bg-gray-800 py-4">
       <div class="container mx-auto text-center text-white">
         <p>&copy; 2024 Ethan Dam. All Rights Reserved.</p>
