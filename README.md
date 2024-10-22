@@ -60,3 +60,9 @@ This project will help us practice our skills in implementing responsive web com
 - Merge any updates into your local branch: "git merge upstream/main"
 
 Other than that, Thank you for considering contributing to this project! Your efforts are greatly appreciated.
+
+## Attributions:
+
+Unsplashed Images for all Meditation related Images:
+
+- https://unsplash.com/s/photos/meditation
