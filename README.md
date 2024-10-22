@@ -63,6 +63,11 @@ Other than that, Thank you for considering contributing to this project! Your ef
 
 ## Attributions:
 
-Unsplashed Images for all Meditation related Images:
+### Unsplashed Images for all Meditation related Images:
 
 - https://unsplash.com/s/photos/meditation
+
+### Flaticon Custom Left & Right Arrows by SumberRejeki:
+
+- https://www.flaticon.com/free-icon/right-arrow_4436154?term=fast+forward+right&page=1&position=10&origin=search&related_id=4436154
+- https://www.flaticon.com/free-icon/left-arrow_4436158?term=fast+forward+left&page=1&position=2&origin=search&related_id=4436158
